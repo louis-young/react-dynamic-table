@@ -14,7 +14,7 @@ export const UsersPage = () => {
   const [columnToSort, setColumnToSort] = useState<string>();
   const [sortDirection, setSortDirection] = useState(SortDirection.Unsorted);
 
-  const [searchQuery, setSearchFormQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const { users, isLoadingUsers, hasUsersError } = useUsers({
     searchQuery,
@@ -37,7 +37,7 @@ export const UsersPage = () => {
   return (
     <Page isLoading={isLoadingUsers} hasError={hasUsersError}>
       <aside className="mb-6">
-        <SearchForm searchQuery={searchQuery} onChange={setSearchFormQuery} />
+        <SearchForm searchQuery={searchQuery} onChange={setSearchQuery} />
       </aside>
 
       <Table
