@@ -41,19 +41,3 @@ export interface FormattedUser {
   name: UserName;
   location: UserLocation;
 }
-
-export interface User {
-  city: string;
-  country: string;
-  description: string;
-  first: string;
-  last: string;
-  latitude: string;
-  longitude: string;
-  name: string;
-  number: number;
-  offset: string;
-  postcode: number;
-  state: string;
-  title: string;
-}
