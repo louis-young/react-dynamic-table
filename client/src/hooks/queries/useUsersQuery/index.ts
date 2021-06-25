@@ -11,7 +11,7 @@ export const useUsersQuery = () => {
     data: usersData,
     isLoading: isLoadingUsers,
     isError: hasUsersError,
-  } = useQuery(queryKey, () => get(endpoint));
+  } = useQuery(queryKey, () => get(endpoint), { retry: false });
 
   return { usersData, isLoadingUsers, hasUsersError };
 };

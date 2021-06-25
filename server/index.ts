@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
 import { pipe } from "ramda";
+import { mockProductionEndpoint } from "./middleware";
 import { get } from "./utilities/http";
 import { flattenUsers, formatUsers } from "./utilities/users";
 
@@ -21,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}.`));
 
-app.get("/users", async (request, response) => {
+app.get("/users", mockProductionEndpoint, async (request, response) => {
   const endpoint = process.env.PUBLIC_SERVER_ENDPOINT as string;
 
   try {
