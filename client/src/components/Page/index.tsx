@@ -1,4 +1,4 @@
-import { ErrorMessage } from "../ErrorMessage";
+import { Message } from "../Message";
 import { Skeleton } from "../Skeleton";
 import { PageProps } from "./types";
 
@@ -8,7 +8,10 @@ export const Page = ({ isLoading, hasError, children }: PageProps) => {
       {isLoading ? (
         <Skeleton />
       ) : hasError ? (
-        <ErrorMessage message="Something went wrong. Please try again." />
+        <Message
+          type="error"
+          message="Something went wrong. Please try again."
+        />
       ) : (
         children
       )}

@@ -9,6 +9,7 @@ import { TableHeader } from "../components/TableHeader";
 import { TableRow } from "../components/TableRow";
 import { TableCell } from "../components/TableCell";
 import { SortDirection } from "../types/sortDirection";
+import { Message } from "../components/Message";
 
 export const UsersPage = () => {
   const [columnToSort, setColumnToSort] = useState<string>();
@@ -40,20 +41,27 @@ export const UsersPage = () => {
         <SearchForm searchQuery={searchQuery} onChange={setSearchQuery} />
       </aside>
 
-      <Table
-        headers={headers.map((header) => (
-          <TableHeader header={header} onSort={onSort} key={uuid()} />
-        ))}
-        rows={users.map((user, index) => (
-          <TableRow
-            cells={Object.values(user).map((value) => (
-              <TableCell value={value} key={uuid()} />
-            ))}
-            isHighlighted={Boolean(index % 2)}
-            key={uuid()}
-          />
-        ))}
-      />
+      {!users.length ? (
+        <Message
+          type="information"
+          message="No users matched your search query."
+        />
+      ) : (
+        <Table
+          headers={headers.map((header) => (
+            <TableHeader header={header} onSort={onSort} key={uuid()} />
+          ))}
+          rows={users.map((user, index) => (
+            <TableRow
+              cells={Object.values(user).map((value) => (
+                <TableCell value={value} key={uuid()} />
+              ))}
+              isHighlighted={Boolean(index % 2)}
+              key={uuid()}
+            />
+          ))}
+        />
+      )}
     </Page>
   );
 };
