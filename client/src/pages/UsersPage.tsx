@@ -41,7 +41,6 @@ export const UsersPage = () => {
       </aside>
 
       <Table
-        isLoading={isLoadingUsers}
         headers={headers.map((header) => (
           <TableHeader header={header} onSort={onSort} key={uuid()} />
         ))}
