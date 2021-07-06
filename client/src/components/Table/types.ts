@@ -1,6 +1,8 @@
-import type { ReactNode } from "react";
+import { User } from "../../types/user";
 
 export interface TableProps {
-  headers: ReactNode;
-  rows: ReactNode;
+  headers: string[];
+  users: User[];
+  onSort: (newColumnToSort: string) => void;
+  isLoading: boolean;
 }

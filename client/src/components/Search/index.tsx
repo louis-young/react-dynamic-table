@@ -1,7 +1,7 @@
 import { Input } from "../Input";
-import type { SearchFormProps } from "./types";
+import type { SearchProps } from "./types";
 
-export const SearchForm = ({ searchQuery, onChange }: SearchFormProps) => {
+export const Search = ({ searchQuery, onChange, isDisabled }: SearchProps) => {
   return (
     <form name="Search" onSubmit={(event) => event.preventDefault()}>
       <label>
@@ -10,8 +10,9 @@ export const SearchForm = ({ searchQuery, onChange }: SearchFormProps) => {
           type="search"
           name="search"
           value={searchQuery}
-          onChange={(newSearchFormQuery) => onChange(newSearchFormQuery)}
+          onChange={(newSearchQuery) => onChange(newSearchQuery)}
           autoFocus
+          isDisabled={isDisabled}
         />
       </label>
     </form>

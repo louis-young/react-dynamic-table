@@ -4,4 +4,5 @@ export interface InputProps {
   value: string;
   onChange: (newValue: string) => void;
   autoFocus: boolean;
+  isDisabled: boolean;
 }

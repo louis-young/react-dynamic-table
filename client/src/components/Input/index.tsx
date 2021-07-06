@@ -6,6 +6,7 @@ export const Input = ({
   value,
   onChange,
   autoFocus,
+  isDisabled,
 }: InputProps) => {
   return (
     <input
@@ -15,6 +16,7 @@ export const Input = ({
       name={name}
       className="border p-4 w-full max-w-xs"
       autoFocus={autoFocus}
+      disabled={isDisabled}
     />
   );
 };

@@ -1,6 +1,6 @@
-import type { ReactNode } from "react";
+import type { User } from "../../types/user";
 
 export interface TableRowProps {
-  cells: ReactNode;
+  user: User;
   isHighlighted: boolean;
 }
