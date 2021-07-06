@@ -11,6 +11,7 @@ export const SearchForm = ({ searchQuery, onChange }: SearchFormProps) => {
           name="search"
           value={searchQuery}
           onChange={(newSearchFormQuery) => onChange(newSearchFormQuery)}
+          autoFocus
         />
       </label>
     </form>
