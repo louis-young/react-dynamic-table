@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { v4 as uuid } from "uuid";
 import { getNewSortDirection } from "../utilities/sortDirections";
 import { useUsers } from "../hooks/useUsers";
 import { Page } from "../components/Page";
@@ -49,15 +48,15 @@ export const UsersPage = () => {
       ) : (
         <Table
           headers={headers.map((header) => (
-            <TableHeader header={header} onSort={onSort} key={uuid()} />
+            <TableHeader header={header} onSort={onSort} key={header} />
           ))}
           rows={users.map((user, index) => (
             <TableRow
               cells={Object.values(user).map((value) => (
-                <TableCell value={value} key={uuid()} />
+                <TableCell value={value} key={value} />
               ))}
               isHighlighted={Boolean(index % 2)}
-              key={uuid()}
+              key={JSON.stringify(user)}
             />
           ))}
         />
