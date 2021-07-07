@@ -14,7 +14,7 @@ export const Input = ({
       onChange={(event) => onChange(event.target.value)}
       type={type}
       name={name}
-      className="border p-4 w-full max-w-xs"
+      className="border p-4 w-full"
       autoFocus={autoFocus}
       disabled={isDisabled}
     />
