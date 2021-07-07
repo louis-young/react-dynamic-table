@@ -3,7 +3,14 @@ import { TableHeader } from "../TableHeader";
 import { TableRow } from "../TableRow";
 import type { TableProps } from "./types";
 
-export const Table = ({ headers, users, onSort, isLoading }: TableProps) => {
+export const Table = ({
+  headers,
+  users,
+  onSort,
+  sortDirection,
+  columnToSort,
+  isLoading,
+}: TableProps) => {
   if (isLoading) {
     return <Skeleton />;
   }
@@ -13,7 +20,13 @@ export const Table = ({ headers, users, onSort, isLoading }: TableProps) => {
       <thead>
         <tr className="bg-gray-200">
           {headers.map((header) => (
-            <TableHeader header={header} onSort={onSort} key={header} />
+            <TableHeader
+              header={header}
+              onSort={onSort}
+              sortDirection={sortDirection}
+              isSorted={columnToSort === header}
+              key={header}
+            />
           ))}
         </tr>
       </thead>

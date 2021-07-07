@@ -51,6 +51,8 @@ export const UsersPage = () => {
           headers={headers}
           users={users}
           onSort={onSort}
+          sortDirection={sortDirection}
+          columnToSort={columnToSort}
           isLoading={isLoadingUsers}
         />
       )}
