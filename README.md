@@ -1,3 +1,5 @@
+⚠️ Please note that this is an old project and does not reflect the quality of my current work.
+
 # React Dynamic Table
 
 A dynamic table with search and sort functionality.
