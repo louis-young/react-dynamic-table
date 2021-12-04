@@ -1,16 +1,28 @@
 # React Table
 
-A React application to fetch and display data in a table with search and sort features.
+A table with search and sort functionality that displays data from an API.
 
 ![React Table](documentation/react-table.png)
 
 ## Description
 
-This is an application that fetches data from a server that formats data received from another service and then displays the data in a table with features to search and sort simultaneously.
+A table that fetches data from a server that formats data received from another service and then displays that data in a table with search and sort features.
 
 ## Motivation
 
 I built this application to practice using TypeScript in React and to build something new and learn a few things.
+
+## Technologies
+
+- TypeScript.
+- React.
+- Node.
+- Express.
+- Random User API.
+
+---
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Available Scripts
 
