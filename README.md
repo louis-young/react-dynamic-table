@@ -1,12 +1,14 @@
-# React Table
+# React Dynamic Table
 
-A table with search and sort functionality that displays data from an API.
+A dynamic table with search and sort functionality.
 
-![React Table](documentation/react-table.png)
+![React Dynamic Table](documentation/react-dynamic-table.png)
 
 ## Description
 
-A table that fetches data from a server that formats data received from another service and then displays that data in a table with search and sort features.
+A dynamic table that displays data fetched from an external service in a table with search and sort features.
+
+The back-end acts as a proxy server that is responsible for making requests to an external API and formatting the response.
 
 ## Motivation
 
